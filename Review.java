@@ -165,18 +165,27 @@ public class Review {
   public static double totalSentiment(String fileName){
     String consumerReview = textToString(fileName);
     //total
-    double total = 0;
+    double total = 0.0;
     //loop
-    while (consumerReview.length() > 0){
-      //get each word
+    while (consumerReview.length() > 0 && consumerReview.indexOf(" ") != -1){
+      //find space
       int space = consumerReview.indexOf(" ");
-      //find sentimental of each word
-      String word = consumerReview.substring(space+1);
-      //add to total
-      //after loop, return total
+      //get each word
+      String word = consumerReview.substring(0, space);
+      //reset consumerReview
+      consumerReview = consumerReview.substring(space+1);
+
+      //get sentiment of word
+      total += sentimentVal(word);
 
     }
+    total += sentimentVal(consumerReview);
 
+    return total;
 
+  }
+  public static int starRating(String fileName){
+    starRating("simpleReview.txt");
+   System.out.println("");
   }
 }
