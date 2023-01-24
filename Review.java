@@ -163,15 +163,15 @@ public class Review {
     }
   }
   public static double totalSentiment(String fileName){
-    String customerReview = textToString(fileName);
+    String consumerReview = textToString(fileName);
     //total
     double total = 0;
     //loop
-    while (customerReview.length() > 0){
+    while (consumerReview.length() > 0){
       //get each word
-      int space = customerReview.indexOf(" ");
+      int space = consumerReview.indexOf(" ");
       //find sentimental of each word
-      String word = 
+      String word = consumerReview.substring(space+1);
       //add to total
       //after loop, return total
 
