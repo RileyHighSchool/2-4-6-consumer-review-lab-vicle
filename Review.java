@@ -162,4 +162,21 @@ public class Review {
       return randomNegativeAdj();
     }
   }
+  public static double totalSentiment(String fileName){
+    String customerReview = textToString(fileName);
+    //total
+    double total = 0;
+    //loop
+    while (customerReview.length() > 0){
+      //get each word
+      int space = customerReview.indexOf(" ");
+      //find sentimental of each word
+      String word = 
+      //add to total
+      //after loop, return total
+
+    }
+
+
+  }
 }
