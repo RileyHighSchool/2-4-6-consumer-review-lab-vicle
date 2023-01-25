@@ -1,13 +1,17 @@
 public class Main {
     public static void main(String[] args) {
-        System.out.println(Review.sentimentVal("Absolutely"));
-        System.out.println(Review.sentimentVal("abandoned"));
-        System.out.println(Review.sentimentVal("account"));
+        System.out.println(Review.sentimentVal("I"));
+        System.out.println(Review.sentimentVal("loved"));
+        System.out.println(Review.sentimentVal("this"));
+        System.out.println(Review.sentimentVal("restaurant"));
+        System.out.println(Review.sentimentVal("so"));
+        System.out.println(Review.sentimentVal("much"));
 
 
         System.out.println(Review.totalSentiment("simpleReview.txt"));
         
-
+        System.out.println(Review.starRating("simpleReview.txt"));
+        
         
     
         }

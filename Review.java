@@ -176,16 +176,28 @@ public class Review {
       consumerReview = consumerReview.substring(space+1);
 
       //get sentiment of word
-      total += sentimentVal(word);
+      total += sentimentVal(removePunctuation(word));
 
     }
-    total += sentimentVal(consumerReview);
+    total += sentimentVal(removePunctuation(consumerReview));
 
     return total;
 
   }
   public static int starRating(String fileName){
-    starRating("simpleReview.txt");
-   System.out.println("");
+    double sentiment = totalSentiment(fileName);
+    if (sentiment < -5){
+      return 1;
+    }else if (sentiment< -3){
+      return 2;
+    }else if ( sentiment< -1){
+      return 3;
+    }else if ( sentiment< 2){
+      return 4;
+    }else {
+      return 5;
+    }
+  
   }
+
 }
