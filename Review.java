@@ -37,7 +37,7 @@ public class Review {
       Scanner input = new Scanner(new File("positiveAdjectives.txt"));
       while(input.hasNextLine()){
         String temp = input.nextLine().trim();
-        System.out.println(temp);
+        //System.out.println(temp);
         posAdjectives.add(temp);
       }
       input.close();
@@ -188,16 +188,18 @@ public class Review {
     double sentiment = totalSentiment(fileName);
     if (sentiment < -5){
       return 1;
-    }else if (sentiment< -3){
+    }else if (sentiment< 0){
       return 2;
-    }else if ( sentiment< -1){
+    }else if ( sentiment< 5){
       return 3;
-    }else if ( sentiment< 2){
+    }else if ( sentiment< 10){
       return 4;
     }else {
       return 5;
     }
   
   }
-
+  public static String fakeReview(String fileName){
+    
+  }
 }
