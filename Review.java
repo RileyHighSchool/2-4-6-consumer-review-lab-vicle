@@ -200,6 +200,24 @@ public class Review {
   
   }
   public static String fakeReview(String fileName){
-    
+    String consumerReview = textToString(fileName);
+    String newReview = "";
+    //loop
+    while (consumerReview.length() > 0 && consumerReview.indexOf("*") != -1){
+      int star = consumerReview.indexOf("*");
+      
+      //find space
+      int space = consumerReview.indexOf(" ",star);
+      //get each word
+      newReview+= consumerReview.substring(0, star);
+
+      newReview+= randomAdjective() + " " ;
+      //reset consumerReview
+      consumerReview = consumerReview.substring(space+1);
+
+    }
+    newReview += consumerReview;
+    return newReview;
+   
   }
 }
