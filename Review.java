@@ -231,6 +231,8 @@ public class Review {
     String consumerReview = textToString(fileName);
     String newReview = "";
     //loop
+    Scanner sc = new Scanner(System.in);
+
     while (consumerReview.length() > 0 && consumerReview.indexOf("*") != -1){
       int star = consumerReview.indexOf("*");
       
@@ -239,9 +241,18 @@ public class Review {
       //get each word
       newReview+= consumerReview.substring(0, star);
 
-      newReview+= randomPositiveAdj() + " " ;
+      
       //reset consumerReview
       consumerReview = consumerReview.substring(space+1);
+
+      
+    System.out.println("Would you like a insult(i) or a compliment(c)?");
+    String insultOrCompliment = sc.nextLine();
+    if (insultOrCompliment.equals("i")){
+      newReview+= randomNegativeAdj() + " " ;
+    } else if (insultOrCompliment.equals("c")){
+      newReview+= randomPositiveAdj() + " " ;
+    }
 
     }
     newReview += consumerReview;
