@@ -14,8 +14,10 @@ public class Main {
         
         // System.out.println(Review.randomNegativeAdj());
         // System.out.println(Review.randomAdjective());
+
         //System.out.println(Review.fakeReview("simpleReview.txt"));
         System.out.println(Review.comInsu("comInsu.txt"));
+
     
         }
 }
