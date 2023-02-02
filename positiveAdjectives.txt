@@ -1,7 +1,6 @@
 beautiful
 good
 fun
-delicious
 clean
 excited
 happy
@@ -12,3 +11,15 @@ calm
 fantastic
 awesome
 amusing
+kind 
+funny
+pretty
+cool
+great
+amazing
+thoughtful
+perfect
+respectful
+smart
+intelligent 
+polite
